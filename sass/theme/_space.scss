@@ -1,5 +1,9 @@
-/* @link https://utopia.fyi/space/calculator?c=320,18,1.2,1480,20,1.25,4,1,&s=0.75,1.5|2|3|4|6,s-l&g=s,l,2xl,12 */
+/* @link https://utopia.fyi/space/calculator?c=320,18,1.2,1480,20,1.25,4,1,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,2xl,12 */
 
+/* Space 3xs: 5px → 5px */
+$space-3xs: clamp(0.3125rem, 0.3125rem + 0vw, 0.3125rem);
+/* Space 2xs: 9px → 10px */
+$space-2xs: clamp(0.5625rem, 0.5453rem + 0.0862vw, 0.625rem);
 /* Space xs: 14px → 15px */
 $space-xs: clamp(0.875rem, 0.8578rem + 0.0862vw, 0.9375rem);
 /* Space s: 18px → 20px */
@@ -16,6 +20,10 @@ $space-2xl: clamp(4.5rem, 4.3621rem + 0.6897vw, 5rem);
 $space-3xl: clamp(6.75rem, 6.5431rem + 1.0345vw, 7.5rem);
 
 /* One-up pairs */
+/* Space 3xs-2xs: 5px → 10px */
+$space-3xs-2xs: clamp(0.3125rem, 0.2263rem + 0.431vw, 0.625rem);
+/* Space 2xs-xs: 9px → 15px */
+$space-2xs-xs: clamp(0.5625rem, 0.4591rem + 0.5172vw, 0.9375rem);
 /* Space xs-s: 14px → 20px */
 $space-xs-s: clamp(0.875rem, 0.7716rem + 0.5172vw, 1.25rem);
 /* Space s-m: 18px → 30px */
