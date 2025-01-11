@@ -1,0 +1,10 @@
+pre {
+  font-size: 90%;
+  padding: 0.6em;
+  overflow-x: auto;
+}
+
+p code,
+li code {
+  color: var(--primary);
+}
