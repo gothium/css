@@ -1,0 +1,95 @@
+*,
+:before,
+:after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  accent-color: var(--accent);
+  background-color: var(--background);
+  color: var(--text);
+  font-family: $ff-sans;
+  line-height: $lh-base;
+  tab-size: 4;
+}
+
+body,
+h5,
+.h5 {
+  font-size: $step-0;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  line-height: $lh-compact;
+}
+
+h1,
+.h1 {
+  font-size: $step-4;
+}
+
+h2,
+.h2 {
+  font-size: $step-3;
+}
+
+h3,
+.h3 {
+  font-size: $step-2;
+}
+
+h4,
+.h4 {
+  font-size: $step-1;
+}
+
+h6,
+.h6,
+small {
+  font-size: $step--1;
+}
+
+hr {
+  /* Change border style to "solid" from "inset" */
+  border-style: solid;
+  /* Fix color inhering on Firefox */
+  color: inherit;
+}
+
+ul[role='list'],
+ol[role='list'] {
+  /* Remove default marker */
+  list-style-type: none;
+  /* Remove default padding-inline-start */
+  padding-inline-start: 0;
+}
+
+canvas,
+img,
+video {
+  /* Change display type from "inline" to "block" */
+  display: block;
+  /* Set "max-width: 100%" to get rid of overflow issues */
+  max-width: 100%;
+}
+
+figcaption {
+  font-style: italic;
+  text-align: center;
+}
+
+blockquote:not([class]) {
+  border-inline-start: 3px solid var(--text);
+  padding-inline-start: $space-s;
+}
+
+blockquote :not(:first-child)p:last-of-type {
+  margin-block-start: $space-xs;
+}
