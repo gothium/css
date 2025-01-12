@@ -1,0 +1,57 @@
+button,
+input,
+select,
+textarea {
+  background-color: var(--background);
+  color: var(--text);
+  border: 0.1rem solid;
+  border-radius: 0.25rem;
+  font-family: inherit;
+  font-size: inherit;
+  padding: $space-3xs;
+}
+
+fieldset {
+  border-color: inherit;
+}
+
+legend, summary {
+  font-weight: $fw-bold;
+}
+
+button,
+select,
+summary {
+  cursor: pointer;
+}
+
+summary {
+  padding-block: 1em;
+}
+
+label {
+  display: block;
+  margin-block: $space-2xs;
+}
+
+button:hover:not(:disabled), button:focus:not(:disabled) {
+  transform: translate(2px, -2px);
+}
+
+button:disabled {
+  cursor: not-allowed;
+}
+
+button[data-variant='primary'] {
+  background-color: var(--primary);
+  color: var(--background);
+}
+
+button[data-variant='secondary'] {
+  background-color: var(--secondary);
+  color: var(--text);
+}
+
+button[data-variant='outline'] {
+  color: var(--primary);
+}
