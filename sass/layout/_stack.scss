@@ -1,0 +1,21 @@
+.stack {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.stack>*+* {
+  margin-block-start: $space-s;
+}
+
+.stack-rec * + * {
+  margin-block-start: $space-s;
+}
+
+.stack-xs > * + * {
+  margin-block-start: $space-xs;
+}
+
+.stack-l > * + * {
+  margin-block-start: $space-l;
+}
