@@ -1,0 +1,11 @@
+.box {
+  padding: $space-s;
+  border: calc($space-s / 10) solid;
+  outline: calc($space-s / 10) transparent;
+  outline-offset: calc(calc($space-s / 10) * -1);
+}
+
+.inverse {
+  background-color: var(--text);
+  color: var(--background);
+}
