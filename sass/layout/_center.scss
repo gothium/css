@@ -1,0 +1,4 @@
+.center {
+  inline-size: min(100% - 2 * $space-s, $measure);
+  margin-inline: auto;
+}
