@@ -1,0 +1,16 @@
+.with-sidebar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $space-s;
+}
+
+.sidebar {
+  flex-basis: var(--sidebar-width, 20rem);
+  flex-grow: 1;
+}
+
+.not-sidebar {
+  flex-basis: 0;
+  flex-grow: 999;
+  min-inline-size: 50%;
+}
