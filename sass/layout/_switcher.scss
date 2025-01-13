@@ -1,0 +1,17 @@
+.switcher {
+  --threshold: 30rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: $space-s;
+}
+
+.switcher > * {
+  flex-grow: 1;
+  flex-basis: calc((var(--threshold) - 100%) * 999);
+}
+
+.switcher > :nth-last-child(n + 5),
+.switcher > :nth-last-child(n + 5) ~ * {
+  /* Switch to a vertical configuration if there are more than 4 child elements */
+  flex-basis: 100%;
+}
