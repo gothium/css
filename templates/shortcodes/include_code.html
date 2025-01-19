@@ -1,0 +1,2 @@
+{% set scss_file = load_data(path=path, format="plain") | trim -%}
+{{ scss_file | safe -}}

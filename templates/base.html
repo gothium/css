@@ -3,15 +3,43 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <title>{% block title %}{% endblock title %}</title>
+    <title>{% block title %}{% endblock title %} - Gothium CSS</title>
     <meta name="color-scheme" content="dark light">
     <link rel="stylesheet" href="/gothium.css">
     <link rel="icon" type="image/png" href="/favicon.png">
     <meta name="description" content="{% block description %}{% endblock description %}">
+    <style>.flow>*+*{margin-block-start: 1rem}</style>
   </head>
   <body>
-    <main>
-      {% block content %}{% endblock content %}
+    <main class="with-sidebar" style="padding: 1rem">
+      <aside class="sidebar" style="--sidebar-width: 15rem">
+        <ul role="list">
+          <li><a href="/">Gothium CSS</a></li>
+        </ul>
+        {% set bases = get_section(path="base/_index.md") %}
+        <details open>
+          <summary>Base</summary>
+          <ul>
+            <li><a href="{{ bases.permalink | safe }}">{{ bases.title }}</a></li>
+            {% for base in bases.pages %}
+            <li><a href="{{ base.permalink | safe }}">{{ base.title }}</a></li>
+            {% endfor %}
+          </ul>
+        </details>
+        {% set layouts = get_section(path="layout/_index.md") %}
+        <details open>
+          <summary>Layouts</summary>
+          <ul>
+            <li><a href="{{ layouts.permalink | safe }}">{{ layouts.title }}</a></li>
+            {% for layout in layouts.pages %}
+            <li><a href="{{ layout.permalink | safe }}">{{ layout.title }}</a></li>
+            {% endfor %}
+          </ul>
+        </details>
+      </aside>
+      <article class="not-sidebar flow">
+        {% block content %}{% endblock content %}
+      </article>
     </main>
   </body>
 </html>

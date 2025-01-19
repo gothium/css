@@ -1,0 +1,12 @@
+/* @link https://utopia.fyi/grid/calculator?c=320,18,1.2,1480,20,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,2xl,12 */
+
+.u-grid {
+  display: grid;
+  gap: $space-s-l;
+}
+
+.u-container {
+  max-width: 92.5rem;
+  padding-inline: $space-s-l;
+  margin-inline: auto;
+}
