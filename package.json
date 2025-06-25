@@ -1,0 +1,36 @@
+{
+  "name": "css",
+  "version": "1.0.0",
+  "description": " Gothium CSS is a minimal CSS framework designed to simplify web development. It provides clean, responsive, and accessible styling for modern web projects, with zero dependencies and an intuitive approach.",
+  "keywords": [
+    "css",
+    "css-framework",
+    "css-library",
+    "minimal",
+    "lightweight",
+    "semantic"
+  ],
+  "homepage": "https://github.com/gothium/css#readme",
+  "bugs": {
+    "url": "https://github.com/gothium/css/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gothium/css.git"
+  },
+  "license": "MIT",
+  "author": {
+    "email": "gothium@tuta.io",
+    "name": "Gothium",
+    "url": "https://gothium.com/"
+  },
+  "funding": "https://github.com/sponsors/gothium",
+  "type": "module",
+  "main": "gothium.min.css",
+  "files": [
+    "gothium.min.css"
+  ],
+  "scripts": {
+    "prepare": "zola build && cp public/gothium.css gothium.min.css"
+  }
+}
